@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Lab16.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Domain\ValueObjects\TimeSlot.cs" />
+    <Compile Include="Domain\ValueObjects\Email.cs" />
+    <Compile Include="Domain\ValueObjects\PhoneNumber.cs" />
+    <Compile Include="Domain\ValueObjects\FullName.cs" />
+    <Compile Include="Domain\ValueObjects\ClassName.cs" />
+    <Compile Include="Domain\ValueObjects\GradeValue.cs" />
+    <Compile Include="Domain\ValueObjects\EntityLifetime.cs" />
+    <Compile Include="Domain\Entities\Student.cs" />
+    <Compile Include="Domain\Entities\Lesson.cs" />
+    <Compile Include="Domain\Enums\StudentStatus.cs" />
+    <Compile Include="Domain\Enums\LessonStatus.cs" />
+    <Compile Include="Domain\Enums\Enumeration.cs" />
+  </ItemGroup>
+
+</Project>
