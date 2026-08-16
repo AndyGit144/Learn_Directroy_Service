@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Задача 14: валидация входных команд/DTO Application-слоя -->
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+
+  <!-- Задача 13: глобальный using для Result-паттерна. -->
+  <ItemGroup>
+    <Using Include="Domain.Common" />
+    <Using Include="Domain.Common.Result" Static="true" />
+  </ItemGroup>
+
+</Project>
