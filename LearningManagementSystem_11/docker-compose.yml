@@ -1,0 +1,23 @@
+services:
+  database:
+    image: postgres:latest
+    restart: always
+    container_name: lms_database
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lms_db
+      PGPORT: 5545
+    ports:
+      - "5645:5545"
+    volumes:
+      - "lms_postgres_volume:/var/lib/postgresql/data"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  lms_postgres_volume:
