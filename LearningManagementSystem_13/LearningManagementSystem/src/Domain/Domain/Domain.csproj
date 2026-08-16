@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- Задача 13: глобальный using для Result-паттерна (Domain.Common),
+       чтобы Result<T,U>, Error, Nothing и хелперы Success/Failure были
+       доступны без явного using в каждом файле проекта. -->
+  <ItemGroup>
+    <Using Include="Domain.Common" />
+    <Using Include="Domain.Common.Result" Static="true" />
+  </ItemGroup>
+
+</Project>
